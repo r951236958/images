@@ -20,7 +20,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+        trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_ID,
       },
     },
     {
@@ -58,5 +58,13 @@ module.exports = {
     //     openAnalyzer: false,
     //   },
     // },
+    {
+      // keep as first gatsby-source-filesystem plugin for gatsby image support
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/img`,
+        name: 'uploads',
+      },
+    },
   ].filter(Boolean),
 }
