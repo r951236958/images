@@ -58,6 +58,13 @@ module.exports = {
         name: 'uploads',
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
     // shouldAnalyseBundle && {
     //   resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
     //   options: {
